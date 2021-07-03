@@ -1,10 +1,12 @@
 package ru.itis.rest.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 import ru.itis.rest.dto.TeacherDto;
 import ru.itis.rest.models.Teacher;
 import ru.itis.rest.repositories.TeachersRepository;
+import ru.itis.rest.security.token.TokenService;
 
 import java.util.List;
 import java.util.function.Supplier;
@@ -17,10 +19,16 @@ public class TeachersServiceImpl implements TeachersService {
     @Autowired
     private TeachersRepository teachersRepository;
 
+    private TokenService tokenService;
+
     @Override
-    public List<TeacherDto> getAllTeachers() {
-        return from(teachersRepository.findAllByIsDeletedIsNull());
+    public List<TeacherDto> getAllTeachers(String token) {
+        if (token == tokenService.getLoggedUserName())
+            return from(teachersRepository.findAllByIsDeletedIsNull());
+        return null;
     }
+
+
 
     @Override
     public TeacherDto addTeacher(TeacherDto teacher) {

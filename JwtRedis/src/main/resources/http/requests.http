@@ -1,0 +1,29 @@
+POST http://localhost/login
+Content-Type: application/json
+
+{
+  "email": "aallaguly01@gmail.com",
+  "password": "B1gather"
+}
+
+###
+
+GET http://localhost/teachers
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiY3JlYXRlZEF0IjoiMjAyMS0wNi0wN1QxMToxODozMS44ODU4NjM4MDAiLCJyb2xlIjoiQURNSU4iLCJzdGF0ZSI6IkFDVElWRSIsImVtYWlsIjoiYWFsbGFndWx5MDFAZ21haWwuY29tIn0.DuWPzJoVCDiOgEktVOR6RNIw9EPxYDpYKdjCuR9ZPnw
+
+###
+
+GET http://localhost/logout
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiY3JlYXRlZEF0IjoiMjAyMS0wNS0zMVQxNToxNzozMC4wODMxNTI2MDAiLCJyb2xlIjoiQURNSU4iLCJzdGF0ZSI6IkFDVElWRSIsImVtYWlsIjoiYWFsbGFndWx5MDFAZ21haWwuY29tIn0.AWEDOjGE6KPY9IPEAx_pIumDI2VNzMLTiUqy-edrRd8
+###
+
+POST http://localhost/users/1/block
+Authorization: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiY3JlYXRlZEF0IjoiMjAyMS0wNS0yM1QxMDozMzoyMC4zNDk5NDM5MDAiLCJyb2xlIjoiQURNSU4iLCJzdGF0ZSI6IkFDVElWRSIsImVtYWlsIjoiYWFsbGFndWx5MDFAZ21haWwuY29tIn0.7Dc_n2ht5tPUeCoAxZr7DW0vSozoJ_T3MBGQG9GOXyo
+
+###
+POST http://localhost/refresh
+Content-Type: application/json
+
+{
+  "refreshToken": "e1160ad6-ad0f-4ff9-97b9-5de44defb33e"
+}

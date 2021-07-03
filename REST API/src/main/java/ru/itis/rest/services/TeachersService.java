@@ -6,7 +6,7 @@ import ru.itis.rest.models.Teacher;
 import java.util.List;
 
 public interface TeachersService {
-    List<TeacherDto> getAllTeachers();
+    List<TeacherDto> getAllTeachers(String token);
 
     TeacherDto addTeacher(TeacherDto teacher);
 

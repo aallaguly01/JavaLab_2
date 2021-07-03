@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.itis.rest.dto.TeacherDto;
 import ru.itis.rest.models.Teacher;
+import ru.itis.rest.security.token.TokenService;
 import ru.itis.rest.services.TeachersService;
 
 import java.util.ArrayList;
@@ -23,7 +24,7 @@ public class TeachersController {
 
     @GetMapping("/teachers")
     public ResponseEntity<List<TeacherDto>> getTeachers(@RequestHeader("X-TOKEN") String token) {
-        return ResponseEntity.ok(teachersService.getAllTeachers());
+        return ResponseEntity.ok(teachersService.getAllTeachers(token));
     }
 
     @ApiOperation(value = "Добавление педагога")

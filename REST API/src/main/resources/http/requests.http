@@ -17,8 +17,8 @@ POST http://localhost/teachers
 Content-Type: application/json
 
 {
-  "firstName": "Марсель",
-  "lastName": "Сидиков"
+  "firstName": "aallaguly01@gmail.com",
+  "lastName": "B1gather"
 }
 
 ###
